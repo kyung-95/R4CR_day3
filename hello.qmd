@@ -2,6 +2,12 @@
 title: "Hello, Quarto"
 format: html
 editor: visual
+subtitle: R4CR Quatro 
+author: kj
+categories: [Quarto, palmerpenguins, R]
+toc: true
+toc-location: right
+date: last-modified
 ---
 
 ```{r}
@@ -23,6 +29,33 @@ Quarto enables you to weave together content and executable code into a finished
 The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package contains size measurements for `r nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
 
 The plot below shows the relationship between flipper and bill lengths of these penguins.
+
+```{r}
+#| eval: true
+#| echo: false
+  
+x<-2
+y<- 3
+print(x+y)
+```
+
+```{r}
+head(iris)
+```
+
+```{r}
+knitr::kable(head(iris))
+```
+
+reactable, DT 반응형웹이기때문에 format html
+
+```{r}
+reactable::reactable(head(iris))
+```
+
+```{r}
+DT::datatable(head(iris))
+```
 
 ```{r}
 #| label: plot-penguins
